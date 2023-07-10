@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>The Big Bang</title>
+		<style>
+			body,
+			header,
+			section,
+			footer {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: Arial, sans-serif;
+				line-height: 1.6;
+				color: #333;
+				background-color: #f0f0f0; /* Light Grey */
+			}
+
+			header {
+				background-color: #35495e; /* Dark Blue */
+				border-bottom-right-radius: 20px;
+				border-bottom-left-radius: 20px;
+				margin-left: 0.6%;
+				margin-right: 0.6%;
+				text-align: center;
+				margin-bottom: 2rem;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			h1,
+			h2,
+			h3 {
+				margin: 0;
+			}
+
+			h1 {
+				font-weight: bold;
+				font-size: 2.8rem;
+				color: #fff; /* White */
+				text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+			}
+
+			h2 {
+				font-weight: bold;
+				font-size: 1.8rem;
+				margin-top: 2rem;
+				color: #333; /* Dark Grey */
+			}
+
+			h3 {
+				font-weight: lighter;
+				font-size: 1.5rem;
+				margin-top: 1.5rem;
+				color: #666; /* Grey */
+			}
+
+			p {
+				margin-bottom: 1.5rem;
+				color: #2d3748; /* Dark Gray */
+			}
+
+			section {
+				background-color: #fff; /* White */
+				padding: 2rem;
+				border-radius: 15px;
+				margin-bottom: 2rem;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+				opacity: 0;
+				visibility: hidden; /* Added */
+				transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Modified */
+				margin-left: 1.5%;
+				margin-right: 1.5%;
+			}
+
+			section.fade-in-out {
+				transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			section.visible {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			section.hidden {
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			section:hover {
+				transform: scale(1.02);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+
+			footer {
+				margin-top: 2rem;
+				border-top-left-radius: 15px;
+				border-top-right-radius: 15px;
+				text-align: center;
+				color: #ccc; /* Very Light Grey */
+				background-color: #333; /* Dark Grey */
+			}
+
+			footer p {
+				margin-bottom: 0px;
+			}
+
+			ul {
+				list-style-type: none;
+				padding: 0;
+			}
+
+			ul li {
+				margin-bottom: 0.5rem;
+			}
+
+			ul li a {
+				color: #0088cc; /* Sky Blue */
+			}
+
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				h1 {
+					font-size: 2.5rem;
+				}
+
+				h2 {
+					font-size: 1.5rem;
+				}
+
+				h3 {
+					font-size: 1.2rem;
+				}
+
+				section {
+					padding: 1.5rem;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>The Big Bang</h1>
+		</header>
+
+		<section id="what-is-big-bang" class="fade-in-out">
+			<h2>What is the Big Bang?</h2>
+			<p>
+				The Big Bang theory stands as the most widely accepted
+				explanation for the origin and evolution of the Universe.
+				According to this theory, the Universe began as a singularity -
+				a point of infinite density and temperature. Approximately 13.8
+				billion years ago, the singularity started expanding, creating
+				space, time, matter, and energy. The Big Bang theory describes a
+				cosmic event that initiated the Universe's existence, leading to
+				its continuous expansion, cooling, and evolution.
+			</p>
+			<p>
+				In the early moments after the Big Bang, the Universe was
+				incredibly hot and dense. As it expanded, it gradually cooled
+				down, allowing fundamental particles and atoms to form. Over
+				billions of years, these particles and atoms came together to
+				create stars, galaxies, planets, and everything we observe in
+				the Universe today. The Big Bang theory provides a framework for
+				understanding the vastness and complexity of the cosmos.
+			</p>
+			<p>
+				The Big Bang theory is supported by various lines of evidence
+				and has revolutionized our understanding of the Universe. Let's
+				explore some of the key evidences that support this remarkable
+				theory.
+			</p>
+		</section>
+
+		<section id="evidences-supporting-big-bang" class="fade-in-out">
+			<h2>Evidences Supporting the Big Bang Theory</h2>
+			<ul>
+				<li>Cosmic Microwave Background (CMB) Radiation: The CMB
+					radiation is a faint glow of electromagnetic radiation that
+					fills the entire sky. It represents the residual heat and
+					light from the early Universe. The CMB radiation has a
+					uniform temperature of about 2.7 Kelvin with slight
+					temperature variations, which reveal density and temperature
+					fluctuations in the primordial plasma. These fluctuations
+					are the seeds from which galaxies and other structures
+					eventually formed. </li>
+				<li>Abundance of Light Elements: The observed abundance of light
+					elements, such as hydrogen, helium, and lithium, aligns with
+					the predictions of the Big Bang model. These elements were
+					formed during the first few minutes of the Universe when
+					conditions were suitable for nuclear fusion. The agreement
+					between the predicted ratios of these elements and their
+					observed abundance supports the validity of the Big Bang
+					theory.</li>
+				<li>Redshift of Distant Galaxies: The redshift of light from
+					distant galaxies provides evidence for the expansion of the
+					Universe. As space expands, light is stretched to longer
+					wavelengths, resulting in a redshift. The observation of
+					higher redshifts in more distant galaxies suggests that the
+					Universe was smaller and denser in the past, supporting the
+					idea of an expanding Universe originating from a hot and
+					dense state.
+			</ul>
+		</section>
+
+		<section id="limitations-of-big-bang" class="fade-in-out">
+			<h2>Limitations of the Big Bang Theory</h2>
+			<p>
+				Despite its immense explanatory power, the Big Bang theory does
+				have certain limitations. These include:
+			</p>
+			<p>
+				The theory does not provide insights into events that occurred
+				prior to the Big Bang or what lies beyond the observable
+				Universe. It also does not address the cause or origin of the
+				initial singularity. Additionally, the nature of dark matter and
+				dark energy, which constitute a significant portion of the
+				Universe, remains unexplained within the scope of the Big Bang
+				theory. The theory requires additional concepts, such as cosmic
+				inflation, to explain certain observations like the flatness and
+				horizon problems.
+			</p>
+			<p>
+				Despite these limitations, the Big Bang theory remains the most
+				comprehensive and widely accepted scientific model explaining
+				the formation and evolution of the Universe. Ongoing research
+				and future discoveries may further refine our understanding of
+				these complexities.
+			</p>
+		</section>
+
+		<footer>
+			<p style="line-height: 0.8;">.</p>
+			<p style="color: #ddd; line-height: 0.8;">References:</p>
+			<ul>
+				<li><a href="https://en.wikipedia.org/wiki/Big_Bang">The BigBang</a></li>
+				<li><a
+						href="https://en.wikipedia.org/wiki/Cosmic_microwave_background">Cosmic
+						Microwave Background</a></li>
+				<li><a href="https://en.wikipedia.org/wiki/Redshift">Redshift</a></li>
+			</ul>
+			<p style="line-height: 0.8;">.</p>
+			<p style="color: #ddd; line-height: 0.4;">Designed and developed by:
+				Dev Kothari</p>
+			<p style="color: #ddd;line-height: 1;">Page Created on: 11th July
+				2023</p>
+			<p style="line-height: 1;">.</p>
+		</footer>
+
+		<script>
+		// JavaScript code
+			function handleFadeAnimation(entries, observer) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+						entry.target.classList.add('visible');
+					}
+					else if (entry.target.classList.contains('visible')) {
+						entry.target.classList.remove('visible');
+					}
+				});
+			}
+
+			function createObserver() {
+				var fadeElements = document.querySelectorAll('.fade-in-out');
+				var threshold = 0.15; // Adjust the visibility threshold here
+
+				var observer = new IntersectionObserver(handleFadeAnimation, {
+					threshold: threshold
+				});
+
+				fadeElements.forEach(function (element) {
+					observer.observe(element);
+				});
+			}
+
+			window.addEventListener('DOMContentLoaded', createObserver);
+		</script>
+	</body>
+</html>
