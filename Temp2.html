@@ -157,7 +157,7 @@
 		</p>
 	</section>
 
-	<section id="big-bang" class="fade-in-out">
+	<section id="big-bang" class="fade-in-out" onclick='OpenNewPage(BigBangLink)'>
 		<h2>The Big Bang</h2>
 		<p>
 			The Big Bang is the prevailing cosmological model for the
@@ -222,7 +222,48 @@
 	</footer>
 
 	<script>
-		// JavaScript code
+
+		const BigBangLink = "https://dev123456689.github.io/My-First-Webpage/BigBang.html"
+
+
+		window.addEventListener('pageshow', handlePageShow);
+
+		function handlePageShow() {
+			// Disable any transition effect applied to the body element
+			document.body.style.transition = 'none';
+			// Remove any filter effect applied to the body element
+			document.body.style.filter = 'none';
+		}
+
+		// This function takes a link as a parameter and opens a new page with that link
+		function OpenNewPage(link) {
+			// Add a gradual blur-out effect to the entire page
+			document.body.style.transition = 'filter 0.3s ease-in-out';
+			document.body.style.filter = 'blur(10px)';
+
+			// Set a timeout to delay the execution of the next code block
+			setTimeout(function() {
+				// Open the BigBang webpage by changing the value of the window's location href
+				window.location.href = link;
+			}, 550); // 0.75 seconds
+		}
+
+
+		window.addEventListener('DOMContentLoaded', createObserver);
+
+		// Creates an observer to fade in and out elements when they intersect the viewport.
+		function createObserver() {
+			var fadeElements = document.querySelectorAll('.fade-in-out');
+
+			var observer = new IntersectionObserver(handleFadeAnimation, {
+				threshold: 0.2 // Adjust the visibility threshold here
+			});
+
+			fadeElements.forEach(function (element) {
+				observer.observe(element);
+			});
+		}
+
 		function handleFadeAnimation(entries, observer) {
 			entries.forEach(function (entry) {
 				if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
@@ -234,20 +275,6 @@
 			});
 		}
 
-		function createObserver() {
-			var fadeElements = document.querySelectorAll('.fade-in-out');
-			var threshold = 0.15; // Adjust the visibility threshold here
-
-			var observer = new IntersectionObserver(handleFadeAnimation, {
-				threshold: threshold
-			});
-
-			fadeElements.forEach(function (element) {
-				observer.observe(element);
-			});
-		}
-
-		window.addEventListener('DOMContentLoaded', createObserver);
 	</script>
 </body>
 
