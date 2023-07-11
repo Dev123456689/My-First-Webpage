@@ -238,14 +238,14 @@
 		// This function takes a link as a parameter and opens a new page with that link
 		function OpenNewPage(link) {
 			// Add a gradual blur-out effect to the entire page
-			document.body.style.transition = 'filter 0.4s ease-in-out';
+			document.body.style.transition = 'filter 0.3s ease-in-out';
 			document.body.style.filter = 'blur(10px)';
 
 			// Set a timeout to delay the execution of the next code block
 			setTimeout(function() {
 				// Open the BigBang webpage by changing the value of the window's location href
 				window.location.href = link;
-			}, 350); 
+			}, 270); 
 		}
 
 
