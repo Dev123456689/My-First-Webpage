@@ -254,6 +254,17 @@
 		</footer>
 
 		<script>
+
+			function PageBlurInTransition() {
+				document.body.style.transition = 'none';
+				document.body.style.filter = 'blur(10px)';
+				document.body.offsetWidth; // Trigger a reflow to apply the initial blur value
+				document.body.style.transition = 'filter 0.3s ease-in-out';
+
+				setTimeout(function() {
+					document.body.style.filter = 'blur(0px)';
+				}, 1); // Delay setting the final blur value
+			}
 		// JavaScript code
 			function handleFadeAnimation(entries, observer) {
 				entries.forEach(function (entry) {
@@ -280,6 +291,7 @@
 			}
 
 			window.addEventListener('DOMContentLoaded', createObserver);
+			window.addEventListener('load', PageBlurInTransition);
 		</script>
 	</body>
 </html>
