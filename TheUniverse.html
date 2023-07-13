@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Universe</title>
+	<style>
+		body,
+		header,
+		section,
+		footer {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			line-height: 1.6;
+			color: #333;
+			background-color: #f0f0f0; /* Light Grey */
+		}
+
+		header {
+			background-color: #35495e; /* Dark Blue */
+			border-bottom-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+			margin-left: 0.6%;
+			margin-right: 0.6%;
+			text-align: center;
+			margin-bottom: 2rem;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		h1,
+		h2,
+		h3 {
+			margin: 0;
+		}
+
+		h1 {
+			font-weight: bold;
+			font-size: 2.8rem;
+			color: #fff; /* White */
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+		}
+
+		h2 {
+			font-weight: bold;
+			font-size: 1.8rem;
+			margin-top: 2rem;
+			color: #333; /* Dark Grey */
+		}
+
+		h3 {
+			font-weight: lighter;
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+			color: #666; /* Grey */
+		}
+
+		p {
+			margin-bottom: 1.5rem;
+			color: #2d3748; /* Dark Gray */
+		}
+
+		section {
+			background-color: #fff; /* White */
+			padding: 2rem;
+			border-radius: 15px;
+			margin-bottom: 2rem;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+			margin-left: 1.5%;
+			margin-right: 1.5%;
+		}
+
+		section.visible {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		section.hidden {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		section:hover {
+			transform: scale(1.02);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		footer {
+			margin-top: 2rem;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+			text-align: center;
+			color: #fff; /* White */
+			background-color: #333; /* Dark Grey */
+		}
+
+		footer p {
+			margin-bottom: 0px;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		ul li {
+			margin-bottom: 0.5rem;
+		}
+
+		ul li a {
+			color: #0088cc; /* Sky Blue */
+		}
+
+		/* Responsive Design */
+		@media (max-width: 768px) {
+			h1 {
+				font-size: 2rem;
+			}
+
+			h2 {
+				font-size: 1.5rem;
+			}
+
+			h3 {
+				font-size: 1.2rem;
+			}
+
+			section {
+				padding: 1.5rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>The Universe</h1>
+	</header>
+
+	<section id="introduction" class="fade-in-out">
+		<h2>Introduction</h2>
+		<p>
+			The universe is everything that exists, including space, time,
+			energy,
+			and matter. It is thought to be about 13.8 billion
+			years old, and it is still expanding. The universe is composed
+			of a
+			variety of objects, including stars, galaxies,
+			planets, and moons.
+		</p>
+	</section>
+
+	<section id="big-bang" class="fade-in-out" onclick='OpenNewPage(BigBangLink)'>
+		<h2>The Big Bang</h2>
+		<p>
+			The Big Bang is the prevailing cosmological model for the
+			universe. It
+			states that the universe began as a very hot,
+			dense point about 13.8 billion years ago and has been expanding
+			and
+			cooling ever since.
+		</p>
+	</section>
+
+	<section id="dark-matter-energy" class="fade-in-out">
+		<h2>Dark Matter and Dark Energy</h2>
+		<p>
+			About 68% of the universe is made up of dark energy, which is a
+			mysterious force that is causing the universe to expand
+			at an accelerating rate. The remaining 27% of the universe is
+			made up of
+			dark matter, another mysterious substance that
+			cannot be seen directly but whose gravitational effects can be
+			observed.
+		</p>
+	</section>
+
+	<section id="observable-universe" class="fade-in-out">
+		<h2>The Observable Universe</h2>
+		<p>
+			The observable universe is the part of the universe that we can
+			see. It
+			is limited by the speed of light, which means that it takes light
+			time to travel from distant objects to us. The observable universe
+			is about 93 billion light-years in diameter.
+		</p>
+	</section>
+
+	<section id="future-universe" class="fade-in-out">
+		<h2>The Future of the Universe</h2>
+		<p>
+			The future of the universe is uncertain. It is possible that the
+			universe will continue to expand forever, eventually becoming
+			cold and
+			dark. It is also possible that the expansion of the universe
+			will slow
+			down and eventually reverse, leading to a big crunch.
+		</p>
+	</section>
+
+	<footer>
+		<p style="line-height: 0.8;">.</p>
+		<p style="color: #ddd; line-height: 0.8;">References:</p>
+		<ul>
+			<li><a href="https://en.wikipedia.org/wiki/Universe">The Universe</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/Big_Bang">The Big Bang</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/Dark_matter">Dark Matter</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/Dark_energy">Dark Energy</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/Observable_universe">The Observable Universe</a></li>
+		</ul>
+		<p style="line-height: 0.8;">.</p>
+		<p style="color: #ddd; line-height: 0.4;">Designed and developed by: Dev Kothari</p>
+		<p style="color: #ddd;line-height: 1;">Page Created on: 11th July 2023</p>
+		<p style="line-height: 1;">.</p>
+	</footer>
+
+	<script>
+
+		const BigBangLink = "https://dev123456689.github.io/My-First-Webpage/BigBang.html"
+
+
+		window.addEventListener('pageshow', handlePageShow);
+
+		function handlePageShow() {
+			// Disable any transition effect applied to the body element
+			document.body.style.transition = 'none';
+			// Remove any filter effect applied to the body element
+			document.body.style.filter = 'none';
+		}
+
+		// This function takes a link as a parameter and opens a new page with that link
+		function OpenNewPage(link) {
+			// Add a gradual blur-out effect to the entire page
+			document.body.style.transition = 'filter 0.3s ease-in-out';
+			document.body.style.filter = 'blur(10px)';
+			// Set a timeout to delay the execution of the next code block
+			setTimeout(function() {
+				// Open the BigBang webpage by changing the value of the window's location href
+				window.location.href = link;
+			}, 200); // 0.75 seconds
+		}
+
+
+		window.addEventListener('DOMContentLoaded', createObserver);
+
+		// Creates an observer to fade in and out elements when they intersect the viewport.
+		function createObserver() {
+			var fadeElements = document.querySelectorAll('.fade-in-out');
+
+			var observer = new IntersectionObserver(handleFadeAnimation, {
+				threshold: 0.2 // Adjust the visibility threshold here
+			});
+
+			fadeElements.forEach(function (element) {
+				observer.observe(element);
+			});
+		}
+
+		function handleFadeAnimation(entries, observer) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+					entry.target.classList.add('visible');
+				}
+				else if (entry.target.classList.contains('visible')) {
+					entry.target.classList.remove('visible');
+				}
+			});
+		}
+
+	</script>
+</body>
+
+</html>
