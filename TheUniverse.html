@@ -18,11 +18,11 @@
 			font-family: Arial, sans-serif;
 			line-height: 1.6;
 			color: #333;
-			background-color: #f0f0f0; /* Light Grey */
+			background-color: #f0f0f0;
 		}
 
 		header {
-			background-color: #35495e; /* Dark Blue */
+			background-color: #35495e;
 			border-bottom-right-radius: 20px;
 			border-bottom-left-radius: 20px;
 			margin-left: 0.6%;
@@ -41,7 +41,7 @@
 		h1 {
 			font-weight: bold;
 			font-size: 2.8rem;
-			color: #fff; /* White */
+			color: #fff;
 			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 		}
 
@@ -49,23 +49,23 @@
 			font-weight: bold;
 			font-size: 1.8rem;
 			margin-top: 2rem;
-			color: #333; /* Dark Grey */
+			color: #333;
 		}
 
 		h3 {
 			font-weight: lighter;
 			font-size: 1.5rem;
 			margin-top: 1.5rem;
-			color: #666; /* Grey */
+			color: #666;
 		}
 
 		p {
 			margin-bottom: 1.5rem;
-			color: #2d3748; /* Dark Gray */
+			color: #2d3748;
 		}
 
 		section {
-			background-color: #fff; /* White */
+			background-color: #fff;
 			padding: 2rem;
 			border-radius: 15px;
 			margin-bottom: 2rem;
@@ -87,6 +87,14 @@
 			visibility: hidden;
 		}
 
+		section.fade{
+			opacity: 0.4;
+		}
+
+		body.blur {
+			filter: blur(12px);
+		}
+
 		section:hover {
 			transform: scale(1.02);
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -97,8 +105,8 @@
 			border-top-left-radius: 15px;
 			border-top-right-radius: 15px;
 			text-align: center;
-			color: #fff; /* White */
-			background-color: #333; /* Dark Grey */
+			color: #fff;
+			background-color: #333;
 		}
 
 		footer p {
@@ -115,10 +123,10 @@
 		}
 
 		ul li a {
-			color: #0088cc; /* Sky Blue */
+			color: #0088cc;
 		}
 
-		/* Responsive Design */
+
 		@media (max-width: 768px) {
 			h1 {
 				font-size: 2rem;
@@ -169,7 +177,7 @@
 		</p>
 	</section>
 
-	<section id="dark-matter-energy" class="fade-in-out" onclick='OpenNewPage(DarkMatterEnergyLink)'>
+	<section id="dark-matter-energy" class="fade-in-out" onclick="OpenNewPage(DarkMatterEnergyLink)">
 		<h2>Dark Matter and Dark Energy</h2>
 		<p>
 			About 68% of the universe is made up of dark energy, which is a
@@ -223,40 +231,51 @@
 
 	<script>
 
-		const BigBangLink = "https://dev123456689.github.io/My-First-Webpage/BigBang.html"
+		// const BigBangLink = "https://dev123456689.github.io/My-First-Webpage/BigBang.html"
+		const BigBangLink = "file:///E:/Users/Dev%20Kothari/Desktop/BigBang.html"
 		const DarkMatterEnergyLink = "https://dev123456689.github.io/My-First-Webpage/DarkMatter&DarkEnergy.html"
+		const ObservableUniverseLink = "https://dev123456689.github.io/My-First-Webpage/ObservableUniverse.html"
+		const AllSections = document.querySelectorAll('section');
 
 
 		window.addEventListener('pageshow', handlePageShow);
-
 		function handlePageShow() {
-			// Disable any transition effect applied to the body element
+
 			document.body.style.transition = 'none';
-			// Remove any filter effect applied to the body element
-			document.body.style.filter = 'none';
+			document.body.classList.remove('blur');
+
+			AllSections.forEach(function (element) {
+				element.style.transition = 'none';
+				element.classList.remove('fade');
+				element.offsetWidth;
+				element.style.transition = 'opacity 0.6s ease-in-out, visibility 0.6s ease-in-out';
+			});
+
 		}
 
-		// This function takes a link as a parameter and opens a new page with that link
 		function OpenNewPage(link) {
-			// Add a gradual blur-out effect to the entire page
-			document.body.style.transition = 'filter 0.3s ease-in-out';
-			document.body.style.filter = 'blur(6px)';
-			// Set a timeout to delay the execution of the next code block
+			
+			document.body.style.transition = 'filter 0.3s ease-in';
+			document.body.classList.add('blur');
+			
+
+			AllSections.forEach(function (element) {
+				element.style.transition = 'opacity 0.3s ease-in';
+				element.classList.add('fade');
+			});
+
 			setTimeout(function() {
-				// Open the BigBang webpage by changing the value of the window's location href
 				window.location.href = link;
-			}, 200); // 0.75 seconds
+			}, 300);
 		}
 
 
 		window.addEventListener('DOMContentLoaded', createObserver);
-
-		// Creates an observer to fade in and out elements when they intersect the viewport.
 		function createObserver() {
 			var fadeElements = document.querySelectorAll('.fade-in-out');
 
 			var observer = new IntersectionObserver(handleFadeAnimation, {
-				threshold: 0.2 // Adjust the visibility threshold here
+				threshold: 0.2
 			});
 
 			fadeElements.forEach(function (element) {
