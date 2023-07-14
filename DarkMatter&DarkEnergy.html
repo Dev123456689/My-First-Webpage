@@ -4,12 +4,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>The Universe</title>
+		<title>Dark Matter & Dark Energy</title>
 		<style>
 		body,
 		header,
 		section,
-		footer {
+		footer { 
 			margin: 0;
 			padding: 0;
 		}
@@ -18,11 +18,11 @@
 			font-family: Arial, sans-serif;
 			line-height: 1.6;
 			color: #333;
-			background-color: #f0f0f0; /* Light Grey */
+			background-color: #f0f0f0; 
 		}
 
 		header {
-			background-color: #35495e; /* Dark Blue */
+			background-color: #35495e; 
 			border-bottom-right-radius: 20px;
 			border-bottom-left-radius: 20px;
 			margin-left: 0.6%;
@@ -41,7 +41,7 @@
 		h1 {
 			font-weight: bold;
 			font-size: 2.8rem;
-			color: #fff; /* White */
+			color: #fff; 
 			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 		}
 
@@ -49,23 +49,23 @@
 			font-weight: bold;
 			font-size: 1.8rem;
 			margin-top: 2rem;
-			color: #333; /* Dark Grey */
+			color: #333; 
 		}
 
 		h3 {
 			font-weight: lighter;
 			font-size: 1.5rem;
 			margin-top: 1.5rem;
-			color: #666; /* Grey */
+			color: #666; 
 		}
 
 		p {
 			margin-bottom: 1.5rem;
-			color: #2d3748; /* Dark Gray */
+			color: #2d3748; 
 		}
 
 		section {
-			background-color: #fff; /* White */
+			background-color: #fff; 
 			padding: 2rem;
 			border-radius: 15px;
 			margin-bottom: 2rem;
@@ -97,8 +97,8 @@
 			border-top-left-radius: 15px;
 			border-top-right-radius: 15px;
 			text-align: center;
-			color: #fff; /* White */
-			background-color: #333; /* Dark Grey */
+			color: #fff; 
+			background-color: #333; 
 		}
 
 		footer p {
@@ -115,10 +115,10 @@
 		}
 
 		ul li a {
-			color: #0088cc; /* Sky Blue */
+				color: #0088cc; 
 		}
 
-		/* Responsive Design */
+		
 		@media (max-width: 768px) {
 			h1 {
 				font-size: 2rem;
@@ -250,15 +250,26 @@
 
 		<script>
 
+			window.addEventListener('load', PageBlurInTransition);
 			function PageBlurInTransition() {
 				document.body.style.transition = 'none';
-				document.body.style.filter = 'blur(6px)';
-				document.body.offsetWidth; // Trigger a reflow to apply the initial blur value
-				document.body.style.transition = 'filter 0.4s ease-in-out';
+				document.body.style.filter = 'blur(12px)';
+				document.body.offsetWidth;
+				document.body.style.transition = 'filter 0.3s ease-out';
+				document.body.style.filter = 'blur(0px)';
+			}
 
-				setTimeout(function() {
-					document.body.style.filter = 'blur(0px)';
-				}, 1); // Delay setting the final blur value
+			window.addEventListener('DOMContentLoaded', createObserver);
+			function createObserver() {
+				var fadeElements = document.querySelectorAll('.fade-in-out');
+				var threshold = 0.2;
+				var observer = new IntersectionObserver(handleFadeAnimation, {
+					threshold: threshold
+				});
+
+				fadeElements.forEach(function (element) {
+					observer.observe(element);
+				});
 			}
 
 			function handleFadeAnimation(entries, observer) {
@@ -272,21 +283,7 @@
 				});
 			}
 
-			function createObserver() {
-				var fadeElements = document.querySelectorAll('.fade-in-out');
-				var threshold = 0.15; // Adjust the visibility threshold here
 
-				var observer = new IntersectionObserver(handleFadeAnimation, {
-					threshold: threshold
-				});
-
-				fadeElements.forEach(function (element) {
-					observer.observe(element);
-				});
-			}
-
-			window.addEventListener('DOMContentLoaded', createObserver);
-			window.addEventListener('load', PageBlurInTransition);
 		</script>
 	</body>
 
