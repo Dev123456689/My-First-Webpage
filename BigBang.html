@@ -247,21 +247,11 @@
 		</footer>
 
 		<script>
-			
-			window.addEventListener('load', PageBlurInTransition);
-			function PageBlurInTransition() {
-				document.body.style.transition = 'none';
-				document.body.style.filter = 'blur(12px)';
-				document.body.offsetWidth;
-				document.body.style.transition = 'filter 0.3s ease-out';
-				document.body.style.filter = 'blur(0px)';
-			}
 
 			window.addEventListener('DOMContentLoaded', createObserver);
 			function createObserver() {
 				var fadeElements = document.querySelectorAll('.fade-in-out');
 				var threshold = 0.2;
-
 				var observer = new IntersectionObserver(handleFadeAnimation, {
 					threshold: threshold
 				});
@@ -282,7 +272,18 @@
 				});
 			}
 
+			window.addEventListener('DOMContentLoaded', InitialEffectsLoaded);
+			function InitialEffectsLoaded() {
+				document.body.style.transition = 'none';
+				document.body.style.filter = 'blur(12px)';
+			}
 
+			window.addEventListener('load', PageBlurInTransition);
+			function PageBlurInTransition() {
+				document.body.style.transition = 'filter 0.5s ease-out';
+				document.body.style.filter = 'blur(0px)';
+			}
+			
 		</script>
 	</body>
 </html>
