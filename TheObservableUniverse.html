@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>The Observable Universe</title>
+		<title>Observable Universe</title>
 		<style>
 		body,
 		header,
@@ -141,7 +141,7 @@
 
 	<body>
 		<header>
-			<h1>The Observable Universe</h1>
+			<h1>Dark Matter & Dark Energy</h1>
 		</header>
         
 		<section id="observable-universe" class="fade-in-out">
@@ -176,21 +176,12 @@
 			<p style="line-height: 0.8;">.</p>
 			<p style="color: #ddd; line-height: 0.4;">Designed and developed by:
 				Dev Kothari</p>
-			<p style="color: #ddd;line-height: 1;">Page Created on: 15th July
+			<p style="color: #ddd;line-height: 1;">Page Created on: 13th July
 				2023</p>
 			<p style="line-height: 1;">.</p>
 		</footer>
 
 		<script>
-
-			window.addEventListener('load', PageBlurInTransition);
-			function PageBlurInTransition() {
-				document.body.style.transition = 'none';
-				document.body.style.filter = 'blur(12px)';
-				document.body.offsetWidth;
-				document.body.style.transition = 'filter 0.3s ease-out';
-				document.body.style.filter = 'blur(0px)';
-			}
 
 			window.addEventListener('DOMContentLoaded', createObserver);
 			function createObserver() {
@@ -216,7 +207,18 @@
 				});
 			}
 
+			window.addEventListener('DOMContentLoaded', InitialEffectsLoaded);
+			function InitialEffectsLoaded() {
+				document.body.style.transition = 'none';
+				document.body.style.filter = 'blur(12px)';
+			}
 
+			window.addEventListener('load', PageBlurInTransition);
+			function PageBlurInTransition() {
+				document.body.style.transition = 'filter 0.5s ease-out';
+				document.body.style.filter = 'blur(0px)';
+			}
+			
 		</script>
 	</body>
 
